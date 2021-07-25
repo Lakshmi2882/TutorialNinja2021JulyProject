@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="yourLogo Test Automation Regression Suite"  parallel="tests" thread-count="2">
+<listeners>
+<listener class-name="com.qa.yourLogo.TestListners.ExtentReportListener"/>
+</listeners>
+<listeners>
+<listener class-name="com.qa.yourLogo.TestListners.AllureListener"/>
+</listeners>
+
+  <test  name="loginPage Test" >
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.yourLogo.Test.loginpageTest"/>
+    </classes>
+  </test>
+  <test  name="Accountpage test" >
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.qa.yourLogo.Test.AccountpageTest"/>
+    </classes>
+    </test>
+    
+   <test  name="Productinfopage test" >
+   <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.qa.yourLogo.Test.Productpagetest"/>
+    </classes>
+  </test>
+  <test  name="shoppingCart test" >
+   <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.yourLogo.Test.ShoppingCartTest"/>
+    </classes>
+  </test>
+  <test  name="CheckOut test" >
+   <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.qa.yourLogo.Test.CheckOutTest"/>
+    </classes>
+  </test>
+</suite> 
